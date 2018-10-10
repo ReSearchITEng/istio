@@ -61,6 +61,6 @@ def GetDefaultAirflowConfig(branch, commit, docker_hub, gcs_path, github_org, pi
 
 def GetDefaultAirflowConfigKeys():
   """Return a list of the keys of configuration for the Pipeline."""
-  dc = GetDefaultAirflowConfig(branch="", commit="", docker_hub="", gcs_path="", pipeline_type="",
+  dc = GetDefaultAirflowConfig(branch="", commit="", docker_hub="", gcs_path="", github_org = "", pipeline_type="",
 			verify_consistency="", version="")
   return list(dc.keys())
