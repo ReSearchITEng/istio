@@ -101,6 +101,7 @@ function test_command() {
 
 # Called directly by Airflow.
 function modify_values_command() {
+    # shellcheck disable=SC2034
     GCS_PATH="gs://$GCS_BUILD_BUCKET/$GCS_STAGING_PATH"
     create_subs_file "BRANCH" "DOCKER_HUB" "GCS_PATH" "GCS_RELEASE_TOOLS_PATH" "VERSION"
     cat "${SUBS_FILE}"
